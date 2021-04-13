@@ -1,8 +1,7 @@
 #! /bin/bash
 
-# python prepare_base.py --name market
-# sleep 5
-# python prepare_templates.py --name market
-# sleep 5
-python move_paste.py --name 09 --right 0.8 --bottom 0.8 --upper 0.2 --left 0.2 --gen_num_per_base 500
-
+python copy_paste.py --name YOURNAME --temp_file_type png --left 0.2 --upper 0.2 --right 0.8 --bottom 0.8 --max_tem 50 --min_tem 30 --gen_num_per_base 100
+sleep 5
+python save_json.py --name YOURNAME --phase train --oc 0.9
+sleep 5
+python train_aug.py --name YOURNAME 
