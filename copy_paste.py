@@ -78,7 +78,7 @@ def copy_pasteN_per_base(b,args):
         occulusion_array = np.zeros(200)
         tem_num = len(tm_masks)
         enlarge_ratio = 5
-        if enlarge_ratio * tem_num < args.max_tem:
+        while enlarge_ratio * tem_num < args.max_tem:
             enlarge_ratio *= 2
         candidates = enlarge_ratio * list(range(tem_num))
         sample_temps = random.sample(candidates, sample_num)
